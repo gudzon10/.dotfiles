@@ -7,8 +7,9 @@ BLUEBOLD="\[\e[1;34m\]"
 ENDCOLOR="\[\e[0m\]"
 
 # NEW_LINE_SYMBOL=" "
+HOST_MARKER="${GREEN}${ENDCOLOR}"
 NEW_LINE_SYMBOL="->"
-PROMPT_START="${GREENBOLD}\u@\h${ENDCOLOR}:${BLUEBOLD}\w${ENDCOLOR}"
+PROMPT_START="${HOST_MARKER}${GREENBOLD}\u@\h${ENDCOLOR}:${BLUEBOLD}\w${ENDCOLOR}"
 PROMPT_END=" $\n${BLUEBOLD}${NEW_LINE_SYMBOL}${ENDCOLOR} "
 PS1="${PROMPT_START}${PROMPT_END}"
 
@@ -45,6 +46,7 @@ alias glog="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
+#alias php='docker run --rm -it -u `id -u`:`id -g` --volume `pwd`:/app -w /app php-cli:8.2 php $@'
 
 dus () {
     if [ $# -gt 1 ]; then
