@@ -29,4 +29,5 @@ fi
 
 # Added by Toolbox App
 export PATH="$PATH:/home/kko/.local/share/JetBrains/Toolbox/scripts"
+# Added by Homebrew
 eval "$(/opt/homebrew/bin/brew shellenv)"
